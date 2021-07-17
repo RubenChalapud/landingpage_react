@@ -17,10 +17,9 @@
     position: absolute;
 }
 
-
 .o-bg-rect {
     position: absolute;
-    height: 18rem;
+    height: 22rem;
     width: 100%;
     background: linear-gradient(270deg, #00E6E3 2.73%, #00FF68 100%); 
     transform: skewY(-2deg); 
@@ -31,5 +30,22 @@
 }
 
 .o-container-client-message{
+    max-width: 100%;
+    width: 100%;
+    margin-top: -4%;
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.o-client-img {
+    margin-left: 12rem;
+}
+
+.o-center-container-message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 11rem;
 }
