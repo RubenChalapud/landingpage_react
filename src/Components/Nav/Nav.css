@@ -20,6 +20,10 @@
     padding: 0.5rem;
     margin-left: 12%;
 }
+.o-img-logo:hover{
+    width: 10.1rem;
+}
+
 
 .o-links-container-nav {
     margin-right: 12%;
