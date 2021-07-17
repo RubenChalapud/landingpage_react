@@ -43,9 +43,45 @@
     margin-left: 12rem;
 }
 
+.o-client-img:hover{
+    width: 30rem;
+}
+
 .o-center-container-message {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-right: 11rem;
+}
+
+.o-container-benefits-title {
+    width: 100%;
+    margin-top: 24rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    color: white;
+}
+
+.o-container-benefits-title-one {
+    display: flex;
+    flex-direction: row;
+}
+
+.o-benefits-title-colorbox {
+    color: #0E0E0E;
+    padding-left: 0.5rem;
+
+    margin-right: 0.5rem;
+    background: linear-gradient(270deg, #00E6E3 2.73%, #00FF68 100%);
+}
+
+h2.o-message-ligth {
+    font-size: 36px;
+}
+
+h2.o-message-black {
+    font-size: 36px;
 }
