@@ -10,7 +10,7 @@ function Links(){
         <div className="o-links-container-nav">
             <Link url="#" texto="INICIO"/>
             <Link url="#" texto="BENEFICIOS"/>
-            <button >Login</button>
+            <button className="o-nav-btn" >Login</button>
         </div>
     );
 
