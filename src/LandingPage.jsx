@@ -7,7 +7,6 @@ import Rectangle from './Components/Rectangle/Rectangle.js';
 import ClientMessage from './Components/ClientMessage/ClientMessage.js';
 import BenefitstTitle from './Components/Benefits/BenefitsTitle.js';
 import Carusel from './Components/Carusel/Carusel.js';
-import RectanglesF from './rectanglesF.png';
 import igIcon from './ig-icon.png';
 import wIcon from './Components/Nav/logoW.png';
 
@@ -21,7 +20,6 @@ function LandingPage() {
             <BenefitstTitle></BenefitstTitle>
             <Carusel></Carusel>
             <div className="o-footer-container">
-                <img src={RectanglesF} alt="rectangulos" className="o-footer-rectangles"></img>
                 <div className="o-content-footer-container">
                     <div className="o-text-footer-container">
                         <p className="o-text-footer">Gracias por</p>
@@ -29,8 +27,8 @@ function LandingPage() {
                     </div>
                     <p className="o-text-footer-ligth">Te invitamos a ver mas información</p>
                     <div className="o-links-footer-container">
-                        <button> <img src={igIcon} alt="Instagram Icon" className="o-footer-icon"></img></button>
-                        <button>Conocer más</button>
+                        <a href="https://www.instagram.com/waconomads/"><img src={igIcon} alt="Instagram Icon" className="o-footer-icon"></img></a>
+                        <a href="https://wacoservices.com/" type="button">Conocer más</a>
                     </div>
                 </div>
             </div>

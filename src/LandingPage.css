@@ -111,6 +111,9 @@ img.o-footer-rectangles {
     height: 25rem;
     font-weight: 300;
     font-size: 36px;
+    background: url(rectanglesF.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .o-text-footer-container {
