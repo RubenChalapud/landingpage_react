@@ -10,9 +10,9 @@ import websiteIcon4 from "./websiteIcon4.png";
 import websiteIcon5 from "./websiteIcon5.png";
 
 const breakPoints = [
-    { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 2 },
-    { width: 768, itemsToShow: 3 },
+    { width: 1, itemsToShow: 2 },
+    { width: 550, itemsToShow: 3 },
+    { width: 768, itemsToShow: 4 },
     { width: 1440, itemsToShow: 4 },
   ];
 

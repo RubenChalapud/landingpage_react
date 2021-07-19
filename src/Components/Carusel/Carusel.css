@@ -1,7 +1,7 @@
 .o-carusel-container {
     display: flex;
     flex-direction: row;
-    width: 64%;
+    max-width: 100%;
     justify-content: center;
     color: white;
     margin-top: 2.5rem;
@@ -103,4 +103,18 @@ button.sc-bdnxRM.ehkxHv.rec.rec-arrow.rec.rec-arrow-right:hover{
     text-align: center;
     inline-size: 9rem;
     font-size: 18px;
+}
+
+button.sc-gKAaRy.ejXxNI.rec.rec-dot.rec.rec-dot_active {
+    box-shadow: none;
+    background: linear-gradient(270deg, #00E6E3 2.73%, #00FF68 100%);
+}
+
+button.sc-gKAaRy.jLgnwX.rec.rec-dot {
+    background: linear-gradient(90deg, #8FFF73 0%, #8FFFF9 100%);
+    opacity: 0.2;
+}
+
+button.sc-gKAaRy.jLgnwX.rec.rec-dot:hover {
+    box-shadow: 0px 0px 5px 2px rgba(1, 255, 47, 0.5);
 }
