@@ -1,0 +1,17 @@
+.o-btn {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #0E0E0E;
+    border: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 14px;
+    width: 223px;
+    height: 56px;
+    background: linear-gradient(270deg, #00E6E3 2.73%, #00FF68 100%);
+    border-radius: 30px;
+}

@@ -50,11 +50,16 @@ img.o-footer-rectangles {
     margin-top: 0;
 }
 
-.o-links-footer-container{
+.o-links-footer-container {
     display: flex;
     flex-direction: row;
-    justify-items: center;
     align-content: center;
+    justify-content: space-between;
+    width: 21%;
+}
+
+.o-footer-icon{
+    margin-top: 0.5rem;
 }
 
 .o-container-end-footer {
