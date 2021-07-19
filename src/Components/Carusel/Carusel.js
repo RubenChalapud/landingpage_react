@@ -17,14 +17,16 @@ const breakPoints = [
   ];
 
 export default function Carusel() {
-    return (  
-        <Carousel breakPoints={breakPoints} className="o-carusel-container">
-            <CaruselItem icon={websiteIcon} text="Flexibilidad Horaria"></CaruselItem>
-            <CaruselItem icon={websiteIcon1} text="Home office"></CaruselItem>
-            <CaruselItem icon={websiteIcon2} text="Capacitaciones y workshops"></CaruselItem>
-            <CaruselItem icon={websiteIcon3} text="Snacks, frutas y bebidas gratis"></CaruselItem>
-            <CaruselItem icon={websiteIcon4} text="Semana Remota"></CaruselItem>
-            <CaruselItem icon={websiteIcon5} text="Trabajar en ultimas tecnologias"></CaruselItem>
-        </Carousel>
+    return (
+        <div className="o-carusel-container">
+            <Carousel breakPoints={breakPoints}>
+                <CaruselItem icon={websiteIcon} text="Flexibilidad Horaria"></CaruselItem>
+                <CaruselItem icon={websiteIcon1} text="Home office"></CaruselItem>
+                <CaruselItem icon={websiteIcon2} text="Capacitaciones y workshops"></CaruselItem>
+                <CaruselItem icon={websiteIcon3} text="Snacks, frutas y bebidas gratis"></CaruselItem>
+                <CaruselItem icon={websiteIcon4} text="Semana Remota"></CaruselItem>
+                <CaruselItem icon={websiteIcon5} text="Trabajar en ultimas tecnologias"></CaruselItem>
+            </Carousel>
+        </div> 
     )
 }
