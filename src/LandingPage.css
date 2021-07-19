@@ -85,3 +85,26 @@ h2.o-message-ligth {
 h2.o-message-black {
     font-size: 36px;
 }
+
+.o-carusel-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    color: white;
+    margin-top: 2rem;
+}
+
+.o-carusel-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.o-carusel-item-text {
+    text-align: center;
+    inline-size: 9rem;
+    font-size: 18px;
+}

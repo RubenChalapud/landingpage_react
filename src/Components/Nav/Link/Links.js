@@ -16,7 +16,7 @@ function Links(){
 
     const scrollToBenefits = () =>{
         window.scrollTo({
-          top: 600, 
+          top: 930, 
           behavior: 'smooth'
         });
     };
