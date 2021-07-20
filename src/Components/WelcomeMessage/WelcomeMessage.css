@@ -1,0 +1,53 @@
+
+.o-welcome-message-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../Header/bg_Img.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.o-rect-welcome-container {
+    width: 50%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.o-rect-welcome{
+    background: linear-gradient(270deg, #00E6E3 2.73%, #00FF68 100%);
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    transform: skewY(-5deg);
+}
+
+.o-rect-welcome:hover{
+    transform: skewY(0deg);
+}
+
+.o-container-logo-text{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.o-logo-white{
+    width: 10rem;
+}
+
+.o-logo-white:hover{
+    width: 10.1rem;
+}
+
+.o-welcome-text{
+    font-size: 50px;
+    margin-top: 2rem;
+    font-weight: lighter;
+}
