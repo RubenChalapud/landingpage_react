@@ -56,6 +56,7 @@ img.o-footer-rectangles {
     align-content: center;
     justify-content: space-between;
     width: 21%;
+    margin-top: 1rem;
 }
 
 .o-footer-icon{
@@ -77,4 +78,40 @@ img.o-footer-rectangles {
 
 .o-footer-icon-end:hover {
     width: 7.2rem;
+}
+
+@media screen and (max-width: 1024px){
+    .o-links-footer-container {
+        width: 29%;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .o-links-footer-container {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 557px){
+    .o-links-footer-container {
+        width: 70%;
+    }
+
+    .o-content-footer-container {
+        font-size: 30px;
+    }
+
+    .o-text-footer-ligth{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 472px){
+    .o-content-footer-container {
+        font-size: 26px;
+    }
+
+    .o-text-footer-ligth{
+        font-size: 18px;
+    }
 }

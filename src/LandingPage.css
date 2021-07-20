@@ -36,7 +36,6 @@
     margin-top: -4%;
     position: absolute;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
 }
@@ -73,6 +72,12 @@
     margin-top: -1rem;
 }
 
+.o-container-benefits-title-two {
+    display: flex;
+    flex-direction: row;
+    margin-top: -1rem;
+}
+
 .o-benefits-title-colorbox {
     color: #0E0E0E;
     padding-left: 0.5rem;
@@ -80,10 +85,99 @@
     background: linear-gradient(270deg, #00E6E3 2.73%, #00FF68 100%);
 }
 
-h2.o-message-ligth {
-    font-size: 36px;
+.o-client-msg{
+    font-size: 36px !important;
+    margin-top: 0 !important;
 }
 
-h2.o-message-black {
-    font-size: 36px;
+
+@media screen and (max-width: 1024px){
+    .o-container-client-message {
+        margin-top: -8%;
+    }
+
+    .o-client-img {
+        margin-left: 3rem;
+    }
+
+    .o-center-container-message {
+        margin-right: 3rem;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .o-client-img {
+        margin-left: 1rem;
+    }
+
+    .o-center-container-message {
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 863px){
+
+    .o-client-img {
+        margin-left: 1rem;
+        width: 25rem;
+    }
+
+    .o-client-img:hover {
+        width: 25.5rem;
+    }
+
+    .o-client-msg{
+        font-size: 27px !important;
+    }
+}
+
+@media screen and (max-width: 815px){
+    .o-container-client-message {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -20%;
+    }
+
+    .o-client-img {
+        margin-left: 0rem;
+    }
+
+    .o-center-container-message {
+        margin-right: 0rem;
+        align-items: center;
+
+    }
+}
+
+@media screen and (max-width: 736px){
+    .o-container-client-message {
+        margin-top: -30%;
+    }
+
+    .o-client-msg{
+        font-size: 25px !important;
+    }
+}
+
+@media screen and (max-width: 515px){
+    .o-container-benefits-title-one{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0.1rem;
+    }
+
+    .o-container-benefits-title-two{
+        margin-top: 0.1rem;
+        margin-bottom: 0.1rem;
+    }
+}
+
+@media screen and (max-width: 456px){
+    .o-client-img {
+        width: 23rem;
+    }
+
+    .o-client-img:hover {
+        width: 23.5rem;
+    }
 }
