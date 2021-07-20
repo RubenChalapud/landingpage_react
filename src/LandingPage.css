@@ -69,13 +69,12 @@
 .o-container-benefits-title-one {
     display: flex;
     flex-direction: row;
-    margin-top: -1rem;
+    
 }
 
 .o-container-benefits-title-two {
     display: flex;
     flex-direction: row;
-    margin-top: -1rem;
 }
 
 .o-benefits-title-colorbox {

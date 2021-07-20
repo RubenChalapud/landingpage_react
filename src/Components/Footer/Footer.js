@@ -2,7 +2,6 @@ import React from 'react';
 import igIcon from './ig-icon.png';
 import wIcon from '../Nav/logoW.png';
 import './Footer.css';
-import Button from '../Button/Button';
 import '../Button/Button.css';
 
 function Footer() {
@@ -16,7 +15,7 @@ function Footer() {
                     </div>
                     <p className="o-text-footer-ligth">Te invitamos a ver mas información</p>
                     <div className="o-links-footer-container">
-                        <a onClick={()=> window.open("https://www.instagram.com/waconomads/", "_blank")}><img src={igIcon} alt="Instagram Icon" className="o-footer-icon"></img></a>
+                        <a href="/" onClick={()=> window.open("https://www.instagram.com/waconomads/", "_blank")}><img src={igIcon} alt="Instagram Icon" className="o-footer-icon"></img></a>
                         <button className="o-btn" onClick={()=> window.open("https://wacoservices.com/", "_blank")}>Conocer más</button>
                     </div>
                 </div>
