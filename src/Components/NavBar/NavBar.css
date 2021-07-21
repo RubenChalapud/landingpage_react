@@ -8,11 +8,12 @@
 .navbar {
     background: transparent;
     height: 80px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    position: sticky;
+    position: fixed;
     top: 0;
     border-bottom: 0.5px solid #232323;
     z-index: 999;

@@ -32,7 +32,7 @@ function NavBar() {
     const scrollToBenefits = () =>{
         closeMobileMenu(); 
         window.scrollTo({
-          top: 930, 
+          top: 870, 
           behavior: 'smooth'
         });
     };
