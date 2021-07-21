@@ -16,3 +16,12 @@
 .o-form-login-container{
     width: 100%;
 }
+
+@media screen and (max-width: 960px){
+    .o-form-login-container{
+        background: url(./Components/Header/bg_Img.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+}

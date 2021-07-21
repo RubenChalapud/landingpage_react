@@ -1,6 +1,6 @@
 import React from 'react';
 import igIcon from './ig-icon.png';
-import wIcon from '../Nav/logoW.png';
+import wIcon from '../NavBar/logoW.png';
 import './Footer.css';
 import '../Button/Button.css';
 

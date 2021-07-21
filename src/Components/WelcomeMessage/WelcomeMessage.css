@@ -28,6 +28,7 @@
 
 .o-rect-welcome:hover{
     transform: skewY(0deg);
+    background: linear-gradient(-270deg, #00E6E3 2.73%, #00FF68 100%);
 }
 
 .o-container-logo-text{

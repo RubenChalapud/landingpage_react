@@ -14,4 +14,27 @@
     height: 56px;
     background: linear-gradient(270deg, #00E6E3 2.73%, #00FF68 100%);
     border-radius: 30px;
+    cursor: pointer;
+}
+
+.o-btn:hover {
+    background: linear-gradient(-270deg, #00E6E3 2.73%, #00FF68 100%);
+}
+
+.o-btn-form {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    color: #0E0E0E;
+    width: 5rem;
+    background: linear-gradient(270deg, #00E6E3 2.73%, #00FF68 100%);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.o-btn-form:hover {
+    background: linear-gradient(-270deg, #00E6E3 2.73%, #00FF68 100%);
 }

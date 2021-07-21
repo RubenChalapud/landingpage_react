@@ -45,6 +45,12 @@ img.o-footer-rectangles {
     -webkit-background-clip: text;
 }
 
+.o-text-footer-color:hover{
+    background: linear-gradient(-270deg, #00E6E3 2.73%, #00FF68 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
 .o-text-footer-ligth{
     font-size: 28px;
     margin-top: 0;

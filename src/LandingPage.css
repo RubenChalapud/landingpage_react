@@ -84,6 +84,10 @@
     background: linear-gradient(270deg, #00E6E3 2.73%, #00FF68 100%);
 }
 
+.o-benefits-title-colorbox:hover {
+    background: linear-gradient(-270deg, #00E6E3 2.73%, #00FF68 100%);
+}
+
 .o-client-msg{
     font-size: 36px !important;
     margin-top: 0 !important;
