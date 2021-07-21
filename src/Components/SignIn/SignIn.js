@@ -80,6 +80,22 @@ const handleLogin = (e) => {
 
   firebase.auth().signInWithEmailAndPassword(user.email, user.password)
   .then(response => {
+    alert('Bienvenido');
+    props.history.push('/Lista');
+  })
+  .catch(error => {
+      console.log(error);
+      alert(error.menssage);
+  });
+};
+
+//Google Login
+const loginGoogle = (e) => {
+    e.preventDefault();
+
+    var provider =  new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider)
+    .then(response => {
       props.history.push('/Lista');
   })
   .catch(error => {
@@ -87,6 +103,23 @@ const handleLogin = (e) => {
       alert(error.menssage);
   });
 };
+
+
+//Facebook Login
+const loginFacebook = (e) => {
+  e.preventDefault();
+
+  var provider =  new firebase.auth.FacebookAuthProvider();
+  firebase.auth().signInWithPopup(provider)
+  .then(response => {
+    props.history.push('/Lista');
+})
+.catch(error => {
+    console.log(error);
+    alert(error.menssage);
+});
+};
+
 
   return (
     <Container component="main" maxWidth="xs">
@@ -171,6 +204,7 @@ const handleLogin = (e) => {
                 variant="contained"
                 color="primary"
                 className="o-btn-google"
+                onClick={loginGoogle}
             >
               <img src={glogo} alt="Logo Google" className="o-g-logo"></img>
             Google
@@ -183,6 +217,7 @@ const handleLogin = (e) => {
                 variant="contained"
                 color="primary"
                 className="o-btn-facebook"
+                onClick={loginFacebook}
             >
               <FacebookIcon className="o-f-logo"></FacebookIcon>
               Facebook
