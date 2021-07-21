@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import { Link } from 'react-router-dom';
+// eslint-disable-next-line 
+import { Link as RouterLink, withRouter } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -11,6 +13,10 @@ import './SignIn.css';
 import '../Button/Button.css';
 import glogo from './go-logo.png';
 import FacebookIcon from '@material-ui/icons/Facebook';
+// eslint-disable-next-line 
+import firebase from 'firebase/app';
+import 'firebase/database';
+import 'firebase/auth';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -21,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
   form: {
     width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
+    marginTop: theme.spacing(2),
   },
   submit: {
     margin: theme.spacing(1.5, 10, 1.5),
@@ -53,8 +59,34 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignIn() {
+const SignIn = (props) => {
   const classes = useStyles();
+
+  const [user, setUser] = useState({
+    email: '',
+    password: ''
+});
+
+//Funcion para actualizar State de usuarios
+const handleChange = (e) => {
+setUser({
+  ...user,
+  [e.target.name]: e.target.value 
+});
+};
+
+const handleLogin = (e) => {
+  e.preventDefault();
+
+  firebase.auth().signInWithEmailAndPassword(user.email, user.password)
+  .then(response => {
+      props.history.push('/Lista');
+  })
+  .catch(error => {
+      console.log(error);
+      alert(error.menssage);
+  });
+};
 
   return (
     <Container component="main" maxWidth="xs">
@@ -63,17 +95,19 @@ export default function SignIn() {
         <Typography component="h1" variant="h4">
           Iniciar Sesión
         </Typography>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} onSubmit={handleLogin}>
           <TextField
             variant="outlined"
             margin="normal"
             required
             fullWidth
             id="email"
-            label="Correo Electrónico"
+            label="Correo electrónico"
             name="email"
             autoComplete="email"
             autoFocus
+            defaultValue={user.email}
+            onChange={handleChange}
             InputLabelProps={{
               classes: {
                 root: classes.cssLabel,
@@ -100,6 +134,8 @@ export default function SignIn() {
             type="password"
             id="password"
             autoComplete="current-password"
+            defaultValue={user.password}
+            onChange={handleChange}
             InputLabelProps={{
               classes: {
                 root: classes.cssLabel,
@@ -153,11 +189,11 @@ export default function SignIn() {
             </Button>
             </Grid>
           </Grid>
-          <Grid container>
+          <Grid container justifyContent="flex-end">
             <Grid item>
                 <Link
                   to='/Registro' className='o-login-link'>
-                  Eres miebro? Registrarse
+                  ¿Eres miebro? Registrarse
                 </Link>
             </Grid>
           </Grid>
@@ -166,3 +202,5 @@ export default function SignIn() {
     </Container>
   );
 }
+
+export default withRouter(SignIn);
