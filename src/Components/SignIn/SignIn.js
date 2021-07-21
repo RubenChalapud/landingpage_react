@@ -156,7 +156,7 @@ export default function SignIn() {
           <Grid container>
             <Grid item>
                 <Link
-                  to='/Login' className='o-login-link'>
+                  to='/Registro' className='o-login-link'>
                   Eres miebro? Registrarse
                 </Link>
             </Grid>
