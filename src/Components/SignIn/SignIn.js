@@ -81,7 +81,7 @@ const handleLogin = (e) => {
   firebase.auth().signInWithEmailAndPassword(user.email, user.password)
   .then(response => {
     alert('Bienvenido');
-    props.history.push('/Lista');
+    props.history.push('/Dashboard');
   })
   .catch(error => {
       console.log(error);
@@ -92,11 +92,10 @@ const handleLogin = (e) => {
 //Google Login
 const loginGoogle = (e) => {
     e.preventDefault();
-
     var provider =  new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider)
     .then(response => {
-      props.history.push('/Lista');
+      props.history.push('/Dashboard');
   })
   .catch(error => {
       console.log(error);
@@ -108,11 +107,10 @@ const loginGoogle = (e) => {
 //Facebook Login
 const loginFacebook = (e) => {
   e.preventDefault();
-
   var provider =  new firebase.auth.FacebookAuthProvider();
   firebase.auth().signInWithPopup(provider)
   .then(response => {
-    props.history.push('/Lista');
+    props.history.push('/Dashboard');
 })
 .catch(error => {
     console.log(error);

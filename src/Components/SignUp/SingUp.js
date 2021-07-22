@@ -83,7 +83,7 @@ const handleSubmit = (e) => {
     //Se guardan los datos del usuario
     delete user.password;
     firebase.database().ref(`/users/${response.user.uid}`).set(user);
-    alert('Bienvenido');
+    alert('Se registró correctamente! Inicia sesion para continuar.');
     props.history.push('/Login');
   })
   .catch(error => {

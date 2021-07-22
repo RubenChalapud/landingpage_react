@@ -1,7 +1,3 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Routes from './Routes';
-
 import firebase from 'firebase/app';
 import 'firebase/database';
 import 'firebase/auth';
@@ -17,18 +13,25 @@ const firebaseConfig = {
   messagingSenderId: "875445825759",
   appId: "1:875445825759:web:017d23b363706b875ef96a"
 };
+
+// eslint-disable-next-line
+const uiConfig = {
+  signInSuccessUrl: '/Dashboard',
+  signInOptions: [
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+    firebase.auth.EmailAuthProvider.PROVIDER_ID
+  ],
+};
+
+
 // Initialize Firebase
 const fb = firebase.initializeApp(firebaseConfig);
-
+//Conexion con auth
+export const auth = fb.auth();
 // Conexion con firestore
 export const db = fb.firestore();
 
-function App() {
-  return (
-    <Router>
-      <Routes />
-    </Router>
-  );
-}
-
-export default App;
+db.settings({
+  timestampsInSnapshots: true,
+});
