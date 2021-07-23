@@ -40,4 +40,17 @@
 .o-container-dashtitle{
     display: flex;
     flex-direction: row;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 729px){
+    .o-container-dashtitle{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 424px){
+    .o-dashboard-title{
+        font-size: 25px;
+    }
 }
