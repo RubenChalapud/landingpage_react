@@ -4,7 +4,7 @@ import './NavBar.css';
 import { ButtonN } from './ButtonN';
 import Logo from "./logoW.png";
 
-function NavBar() {
+function NavDashboard() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
   
@@ -32,7 +32,7 @@ function NavBar() {
     const scrollToBenefits = () =>{
         closeMobileMenu(); 
         window.scrollTo({
-          top: 870, 
+          top: 672, 
           behavior: 'smooth'
         });
     };
@@ -64,27 +64,27 @@ function NavBar() {
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
               <li className='nav-item'>
-                <Link to="/" className='nav-links' onClick={scrollToTop}>
-                    INICIO
+                <Link to="/Dashboard" className='nav-links' onClick={scrollToTop}>
+                    API
                 </Link>
               </li>
               <li className='nav-item'>
-                <Link to="/" className='nav-links' onClick={scrollToBenefits}>
-                  BENEFICIOS
+                <Link to="/Dashboard" className='nav-links' onClick={scrollToBenefits}>
+                  FAVORITOS
                 </Link>
               </li>  
               <li>
                 <Link
-                  to='/Login' className='nav-links-mobile' onClick={closeMobileMenu}>
-                  Login
+                  to='/' className='nav-links-mobile' onClick={closeMobileMenu}>
+                  Salir
                 </Link>
               </li>
             </ul>
-            {button && <ButtonN buttonStyle='btn--outline' to={"/Login"}>Login</ButtonN>}
+            {button && <ButtonN buttonStyle='btn--outline' to={"/"}>Cerrar Sesion</ButtonN>}
           </div>
         </nav>
       </>
     )
 }
 
-export default NavBar
+export default NavDashboard

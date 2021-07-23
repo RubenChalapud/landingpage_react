@@ -38,3 +38,32 @@
 .o-btn-form:hover {
     background: linear-gradient(-270deg, #00E6E3 2.73%, #00FF68 100%);
 }
+
+.o-btn-fav {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #0E0E0E;
+    border: transparent;
+    padding: 3px 14px;
+    width: 80px;
+    height: 30px;
+    background: linear-gradient(270deg, #00E6E3 2.73%, #00FF68 100%);
+    border-radius: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.o-btn-fav:hover {
+    background: linear-gradient(-270deg, #00E6E3 2.73%, #00FF68 100%);
+}
+
+.o-btn-eliminate{
+    color: white;
+    background: linear-gradient(90deg, #FF0000 0%, rgba(255, 107, 0, 0.87) 100%);
+}
+
+.o-btn-eliminate:hover{
+    background: linear-gradient(-90deg, #FF0000 0%, rgba(255, 107, 0, 0.87) 100%);
+}

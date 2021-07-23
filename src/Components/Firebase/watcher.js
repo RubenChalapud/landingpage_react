@@ -5,7 +5,7 @@ export function watchUserChanges(callBack){
         if(user && !user.isAnonymous){
             console.log('logged in');
             callBack({
-                id: user.uid,
+                uid: user.uid,
                 email: user.email,
                 displayName: user.displayName,
             });

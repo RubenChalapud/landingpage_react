@@ -1,0 +1,50 @@
+.o-table {
+    width: 100%;
+    padding: 0 0 0 0;
+    border: 1px solid rgba(1, 255, 47, 0.5);
+    overflow-y: scroll;
+    display: block;
+}
+
+.o-tableHeader {
+    width: 100%;
+    text-align: left;
+}
+
+th {
+    padding: 0.5rem 0;
+    background: #232323;
+    font-style: normal;
+    font-weight: 300;
+}
+
+th:first-of-type {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.o-tableRow {
+    width: 100%;
+}
+
+td {
+    border-right: 1px solid #777;
+    border-bottom: 1px solid #777;
+    padding: 0.2rem 0;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+}
+
+td:first-of-type {
+    text-align: center;
+}
+
+td:last-of-type {
+    border-right: 0;
+}
+
+td.o-td-body{
+    min-width: 50rem;
+}
