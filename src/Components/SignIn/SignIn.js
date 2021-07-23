@@ -17,6 +17,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import firebase from 'firebase/app';
 import 'firebase/database';
 import 'firebase/auth';
+import swal from 'sweetalert';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -80,7 +81,7 @@ const handleLogin = (e) => {
 
   firebase.auth().signInWithEmailAndPassword(user.email, user.password)
   .then(response => {
-    alert('Bienvenido');
+    swal('Bienvenido');
     props.history.push('/Dashboard');
   })
   .catch(error => {
@@ -95,6 +96,7 @@ const loginGoogle = (e) => {
     var provider =  new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider)
     .then(response => {
+      swal('Bienvenido');
       props.history.push('/Dashboard');
   })
   .catch(error => {
@@ -110,6 +112,7 @@ const loginFacebook = (e) => {
   var provider =  new firebase.auth.FacebookAuthProvider();
   firebase.auth().signInWithPopup(provider)
   .then(response => {
+    swal('Bienvenido');
     props.history.push('/Dashboard');
 })
 .catch(error => {

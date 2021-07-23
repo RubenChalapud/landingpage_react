@@ -14,6 +14,7 @@ import '../SignIn/SignIn.css';
 import firebase from 'firebase/app';
 import 'firebase/database';
 import 'firebase/auth';
+import swal from 'sweetalert';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -83,7 +84,7 @@ const handleSubmit = (e) => {
     //Se guardan los datos del usuario
     delete user.password;
     firebase.database().ref(`/users/${response.user.uid}`).set(user);
-    alert('Se registró correctamente! Inicia sesion para continuar.');
+    swal('Se registró correctamente! Inicia sesion para continuar.');
     props.history.push('/Login');
   })
   .catch(error => {

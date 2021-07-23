@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import './NavBar.css';
 import { ButtonN } from './ButtonN';
 import Logo from "./logoW.png";
+import { auth } from '../../App';
+import swal from 'sweetalert';
 
 function NavDashboard() {
     const [click, setClick] = useState(false);
@@ -44,6 +46,18 @@ function NavDashboard() {
         setButton(true);
       }
     };
+
+    const logOut = () =>{
+      swal({
+          text: '¿Estás seguro de Cerrar Sesion?', 
+          icon: "warning",
+          buttons: ["No", "Si"]
+      }).then(r =>{
+          if(r){
+            auth.signOut();
+          }
+      })
+    };
   
     useEffect(() => {
       showButton();
@@ -75,12 +89,12 @@ function NavDashboard() {
               </li>  
               <li>
                 <Link
-                  to='/' className='nav-links-mobile' onClick={closeMobileMenu}>
+                  to='/Dashboard' className='nav-links-mobile' onClick={()=>{ closeMobileMenu(); logOut() }}>
                   Salir
                 </Link>
               </li>
             </ul>
-            {button && <ButtonN buttonStyle='btn--outline' to={"/"}>Cerrar Sesion</ButtonN>}
+            {button && <ButtonN buttonStyle='btn--outline' to={"/Dashboard"} onClick={logOut}>Cerrar Sesion</ButtonN>}
           </div>
         </nav>
       </>

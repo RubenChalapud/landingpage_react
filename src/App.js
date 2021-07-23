@@ -14,16 +14,6 @@ const firebaseConfig = {
   appId: "1:875445825759:web:017d23b363706b875ef96a"
 };
 
-// eslint-disable-next-line
-const uiConfig = {
-  signInSuccessUrl: '/Dashboard',
-  signInOptions: [
-    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-    firebase.auth.EmailAuthProvider.PROVIDER_ID
-  ],
-};
-
 
 // Initialize Firebase
 const fb = firebase.initializeApp(firebaseConfig);
@@ -31,6 +21,7 @@ const fb = firebase.initializeApp(firebaseConfig);
 export const auth = fb.auth();
 // Conexion con firestore
 export const db = fb.firestore();
+
 
 db.settings({
   timestampsInSnapshots: true,

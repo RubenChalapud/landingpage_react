@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createData } from '../Firebase/api';
+import swal from 'sweetalert';
 
 function ButtonAgregar(props) {
     //Valores
@@ -13,7 +14,11 @@ function ButtonAgregar(props) {
 
     const Task = async (valueObject) =>{
         await createData(valueObject, props.uid);
-        alert('Se agregó a Favoritos');
+        swal({
+            text: 'Se agregó a Favoritos',
+            icon:"success",
+            buttons: "Aceptar"
+    });
     }
 
     const handleClick = (e) =>{

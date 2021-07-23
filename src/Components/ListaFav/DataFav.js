@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { db } from "../../App";
 import { deleteData } from '../Firebase/api';
+import swal from 'sweetalert';
 
 function DataFav(props) {
     const [favorites, setFavorites] = useState([]);
@@ -19,14 +20,21 @@ function DataFav(props) {
 
     //Metodo para eliminar un producto
     const DeleteFavorite = async (id) =>{
-        if(window.confirm('¿Estás seguro de eliminar de favoritos?')){
-            await deleteData(props.uid, id)
-        }
+        swal({
+            text: '¿Estás seguro de eliminar de favoritos?', 
+            icon: "warning",
+            buttons: ["No", "Si"]
+        }).then(r =>{
+            if(r){
+             deleteData(props.uid, id) 
+            }
+        })
     };
 
     useEffect(()=>{
         getFavorites()
-    }, [])
+        // eslint-disable-next-line 
+    }, []);
 
     return (
         <table className="o-table">
