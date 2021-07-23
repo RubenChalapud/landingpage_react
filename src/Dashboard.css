@@ -26,8 +26,8 @@
 .o-container-favdata{
     width: 100%;
     height: 42rem;
-    background: #232323;
     color: white;
+    background: #232323;
     display: flex;
     flex-direction: column;
     padding: 10%;

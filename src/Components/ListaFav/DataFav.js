@@ -32,10 +32,10 @@ function DataFav(props) {
         <table className="o-table">
             <thead>
                 <tr className="o-table-head">
-                    <th>Id</th>
-                    <th>Titulo</th>
-                    <th>Descripción</th>
-                    <th>Eliminar de Favoritos</th>
+                    <th className="o-th">Id</th>
+                    <th className="o-th">Titulo</th>
+                    <th className="o-th">Descripción</th>
+                    <th className="o-th">Eliminar de Favoritos</th>
                 </tr>
             </thead>
             <tbody>
