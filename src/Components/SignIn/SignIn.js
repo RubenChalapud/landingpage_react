@@ -229,7 +229,7 @@ const loginFacebook = (e) => {
             <Grid item>
                 <Link
                   to='/Registro' className='o-login-link'>
-                  ¿Eres miebro? Registrarse
+                  ¿Estás registrado? Registrarse
                 </Link>
             </Grid>
           </Grid>
